@@ -68,13 +68,13 @@
                 <div class="service-item text-center pt-3">
                     <div class="p-4">
                         {% if extensionproject_file.file.url|slice:"-4:" == ".doc" or extensionproject_file.file.url|slice:"-5:" == ".docx" %}
-                        <img class="img-fluid" src="{% static 'base/img/doc.png'%}" width="30px" alt="">
+                        <img class="img-fluid" src="{% static 'img/doc.png'%}" width="30px" alt="">
                         {% elif extensionproject_file.file.url|slice:'-4:' == ".pdf"%}
-                        <img class="img-fluid" src="{% static 'base/img/pdf.png'%}" width="30px" alt="">
+                        <img class="img-fluid" src="{% static 'img/pdf.png'%}" width="30px" alt="">
                         {% elif extensionproject_file.file.url|slice:'-4:' == ".ppt" or extensionproject_file.file.url|slice:'-5:' == ".pptx" %}
-                        <img class="img-fluid" src="{% static 'base/img/ppt.png'%}" width="30px" alt="">
+                        <img class="img-fluid" src="{% static 'img/ppt.png'%}" width="30px" alt="">
                         {% elif extensionproject_file.file.url|slice:'-4:' == 'xls' or extensionproject_file.file.url|slice:'-5:' == ".xlsx" %}
-                        <img class="img-fluid" src="{% static 'base/img/xls.png'%}" width="30px" alt="">
+                        <img class="img-fluid" src="{% static 'img/xls.png'%}" width="30px" alt="">
                         {% endif %}
                         <small class="mb-3"><a href="http://127.0.0.1:8000{{ extensionproject_file.file.url }}"
                             target="_blank">{{extensionproject_file.title}}</a></small>
@@ -104,12 +104,12 @@
                 <div class="item col-lg-10 col-md-12 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-item bg-light">
                         <div class="overflow-hidden text-center">
-                            <img class="img-fluid" src="{% if user.profile.avatar %}{{ user.profile.avatar.url }}{% else %}{{ MEDIA_URL }}/default/default-avatar.png{% endif %}">
+                            <img class="img-fluid" src="{{ MEDIA_URL }}/default/default-profile.jpg" alt="">
                         </div>
                         <div class="text-center p-4">
                             <h5 class="mb-0">{{extensionproject_member.member.member.first_name}}
                                 {{extensionproject_member.member.member.last_name}}</h5>
-                            <small>Software Developer</small>
+                            <small>Designation</small>
                         </div>
                     </div>
                 </div>
@@ -120,7 +120,7 @@
             <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="team-item bg-light">
                     <div class="overflow-hidden text-center">
-                        <img class="img-fluid" src="{% if user.profile.avatar %}{{ user.profile.avatar.url }}{% else %}{{ MEDIA_URL }}/default/default-avatar.png{% endif %}">
+                        <img class="img-fluid" src="{{ MEDIA_URL }}/default/default-profile.jpg" alt="">
                     </div>
                     <div class="text-center p-4">
                         <h5 class="mb-0">{{extensionproject_member.member.member.first_name}}
