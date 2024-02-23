@@ -45,12 +45,7 @@
                                 </label><br>
                                     
                                     <ul id="menu_item{{lesson.id}}" class="submenu collapse" data-bs-parent="#nav_accordion">
-                                        <li>
-                                            <img class="img-fluid" src="{% static 'base/img/doc.png'%}" width="30px" alt="">
-                                            <label >
-                                                <small><a class="nav-link" href="{% url 'lesson-detail' workshop.id lesson.slug lesson.id %}">Description</a></small>
-                                                </label><br>
-                                        </li>
+                                        
                                 {% for lessonfile in lessonfile_list %}
                                     {% if lessonfile.lesson.id == lesson.id %}
                                         <li>
@@ -103,12 +98,7 @@
                                         </label><br>
                                             
                                             <ul id="menu_item{{lesson.id}}" class="submenu collapse" data-bs-parent="#nav_accordion">
-                                                <li>
-                                                    <img class="img-fluid" src="{% static 'base/img/doc.png'%}" width="30px" alt="">
-                                                    <label >
-                                                        <small><a class="nav-link" href="{% url 'lesson-detail' workshop.id lesson.slug lesson.id %}">Description</a></small>
-                                                        </label><br>
-                                                </li>
+                                                
                                         {% for lessonfile in lessonfile_list %}
                                             {% if lessonfile.lesson.id == lesson.id %}
                                                 <li>

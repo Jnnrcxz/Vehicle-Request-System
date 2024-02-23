@@ -27,7 +27,6 @@ context = {
     'extensionprogram_list' : extensionprogram_list,
     'extensionprogram_list_limited' : extensionprogram_list[:3]
 }
-
 #Error Handling
 def error_404_view(request, exception):
 
